@@ -1,0 +1,28 @@
+{
+    "name": "Deny by Location",
+    "children": [],
+    "behaviors": [
+        {
+            "name": "denyAccess",
+            "options": {
+                "reason": "deny-by-continent",
+                "enabled": true
+            }
+        }
+    ],
+    "criteria": [
+        {
+            "name": "userLocation",
+            "options": {
+                "field": "CONTINENT",
+                "checkIps": "CONNECTING",
+                "continentValues": [
+                    "NA"
+                ],
+                "matchOperator": "IS_ONE_OF"
+            }
+        }
+    ],
+    "criteriaMustSatisfy": "all",
+    "comments": "List the locations that need to be denied"
+}

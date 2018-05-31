@@ -1,0 +1,8 @@
+[
+    {
+        "cnameFrom": "qa.gcs.pd.demo",
+        "cnameTo": "qa.gcs.pd.demo.edgesuite.net",
+        "cnameType": "EDGE_HOSTNAME",
+        "edgeHostnameId": null
+    }
+]

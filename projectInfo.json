@@ -1,0 +1,14 @@
+{
+    "productId": "prd_SPM",
+    "contractId": "C-1ED34DY",
+    "groupId": 63802,
+    "environments": [
+        "dev",
+        "qa",
+        "prod"
+    ],
+    "edgeGridConfig": {
+        "section": "credentials"
+    },
+    "name": "gcs.pd.demo"
+}

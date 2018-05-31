@@ -1,0 +1,16 @@
+{
+    "name": "prod",
+    "propertyName": "prod.gcs.pd.demo",
+    "propertyId": 465136,
+    "latestVersionInfo": {
+        "propertyVersion": 1,
+        "updatedByUser": "7nz2pfn4ehyzh3qf",
+        "updatedDate": "2018-05-31T19:54:54Z",
+        "productionStatus": "INACTIVE",
+        "stagingStatus": "INACTIVE",
+        "etag": "45e90420f312af28b49550ddd96ecf802fd7fc71",
+        "productId": "prd_SPM",
+        "ruleFormat": "v2017-06-19"
+    },
+    "suggestedRuleFormat": "v2017-06-19"
+}

@@ -1,0 +1,25 @@
+{
+    "name": "Mobile Redirect",
+    "children": [],
+    "behaviors": [
+        {
+            "name": "modifyOutgoingRequestHeader",
+            "options": {
+                "action": "ADD",
+                "standardAddHeaderName": "OTHER",
+                "headerValue": "true",
+                "customHeaderName": "mobile"
+            }
+        }
+    ],
+    "criteria": [
+        {
+            "name": "deviceCharacteristic",
+            "options": {
+                "characteristic": "IS_WIRELESS_DEVICE",
+                "booleanValue": true
+            }
+        }
+    ],
+    "criteriaMustSatisfy": "all"
+}

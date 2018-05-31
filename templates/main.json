@@ -1,0 +1,121 @@
+{
+    "rules": {
+        "name": "default",
+        "children": [
+            "#include:performance.json",
+            "#include:Offload.json",
+            "#include:Homepage_Caching.json",
+            "#include:Mobile_Redirect.json",
+            "#include:Real_User_Monitoring.json",
+            "#include:Deny_Specific_Referrer.json",
+            "#include:Deny_by_Location.json",
+            "#include:Adaptive_Image_Compression.json"
+        ],
+        "behaviors": [
+            {
+                "name": "origin",
+                "options": {
+                    "cacheKeyHostname": "ORIGIN_HOSTNAME",
+                    "compress": true,
+                    "enableTrueClientIp": false,
+                    "forwardHostHeader": "ORIGIN_HOSTNAME",
+                    "httpPort": 80,
+                    "originType": "CUSTOMER",
+                    "hostname": "${env.originHostname}",
+                    "originCertificate": "",
+                    "verificationMode": "PLATFORM_SETTINGS",
+                    "ports": "",
+                    "httpsPort": 443,
+                    "originSni": false
+                }
+            },
+            {
+                "name": "allowPost",
+                "options": {
+                    "allowWithoutContentLength": false,
+                    "enabled": true
+                }
+            },
+            {
+                "name": "realUserMonitoring",
+                "options": {
+                    "enabled": true
+                }
+            },
+            {
+                "name": "prefetch",
+                "options": {
+                    "enabled": true
+                }
+            },
+            {
+                "name": "removeVary",
+                "options": {
+                    "enabled": true
+                }
+            },
+            {
+                "name": "cpCode",
+                "options": {
+                    "value": {
+                        "id": "${env.cpCode}"
+                    }
+                }
+            },
+            {
+                "name": "modifyOutgoingResponseHeader",
+                "options": {
+                    "action": "ADD",
+                    "standardAddHeaderName": "OTHER",
+                    "headerValue": "Bar",
+                    "customHeaderName": "Foo"
+                }
+            },
+            {
+                "name": "prefreshCache",
+                "options": {
+                    "enabled": true,
+                    "prefreshval": 90
+                }
+            },
+            {
+                "name": "modifyOutgoingRequestHeader",
+                "options": {
+                    "action": "MODIFY",
+                    "standardModifyHeaderName": "OTHER",
+                    "newHeaderValue": "{{builtin.AK_TLS_VERSION}}|{{builtin.AK_TLS_CIPHER_NAME}}",
+                    "avoidDuplicateHeaders": false,
+                    "customHeaderName": "X-Edge-TLS-Info"
+                }
+            },
+            {
+                "name": "modifyOutgoingResponseHeader",
+                "options": {
+                    "action": "ADD",
+                    "standardAddHeaderName": "PRAGMA",
+                    "headerValue": "dom was here"
+                }
+            }
+        ],
+        "options": {
+            "is_secure": true
+        },
+        "variables": [
+            {
+                "name": "PMUSER_FOOCPCODE",
+                "value": "12345",
+                "description": "CP Code",
+                "hidden": false,
+                "sensitive": false
+            },
+            {
+                "name": "PMUSER_ORIGIN",
+                "value": "origin.akshayranganath.com",
+                "description": "Origin",
+                "hidden": false,
+                "sensitive": false
+            }
+        ],
+        "comments": "The behaviors in the Default Rule apply to all requests for the property hostname(s) unless another rule overrides the Default Rule settings."
+    }
+}

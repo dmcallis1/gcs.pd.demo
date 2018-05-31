@@ -1,0 +1,14 @@
+{
+    "name": "Real User Monitoring",
+    "children": [],
+    "behaviors": [
+        {
+            "name": "realUserMonitoring",
+            "options": {
+                "enabled": false
+            }
+        }
+    ],
+    "criteria": [],
+    "criteriaMustSatisfy": "all"
+}

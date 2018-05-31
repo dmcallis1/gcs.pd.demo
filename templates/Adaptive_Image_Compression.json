@@ -1,0 +1,43 @@
+{
+    "name": "Adaptive Image Compression",
+    "children": [],
+    "behaviors": [
+        {
+            "name": "adaptiveImageCompression",
+            "options": {
+                "title_aic_mobile": "",
+                "title_aic_nonmobile": "",
+                "compressMobile": true,
+                "compressStandard": true,
+                "tier1MobileCompressionMethod": "BYPASS",
+                "tier2MobileCompressionMethod": "COMPRESS",
+                "tier2MobileCompressionValue": 60,
+                "tier3MobileCompressionMethod": "COMPRESS",
+                "tier3MobileCompressionValue": 40,
+                "tier1StandardCompressionMethod": "BYPASS",
+                "tier2StandardCompressionMethod": "BYPASS",
+                "tier3StandardCompressionMethod": "COMPRESS",
+                "tier3StandardCompressionValue": 40
+            }
+        }
+    ],
+    "criteria": [
+        {
+            "name": "fileExtension",
+            "options": {
+                "matchCaseSensitive": false,
+                "matchOperator": "IS_ONE_OF",
+                "values": [
+                    "jpg",
+                    "jpeg",
+                    "jpe",
+                    "jif",
+                    "jfif",
+                    "jfi"
+                ]
+            }
+        }
+    ],
+    "criteriaMustSatisfy": "all",
+    "comments": "A default AIC behavior with a match on JPEG-compatible file extensions."
+}

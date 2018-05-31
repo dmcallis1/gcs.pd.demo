@@ -1,0 +1,16 @@
+{
+    "name": "qa",
+    "propertyName": "qa.gcs.pd.demo",
+    "propertyId": 465135,
+    "latestVersionInfo": {
+        "propertyVersion": 1,
+        "updatedByUser": "7nz2pfn4ehyzh3qf",
+        "updatedDate": "2018-05-31T19:54:48Z",
+        "productionStatus": "INACTIVE",
+        "stagingStatus": "INACTIVE",
+        "etag": "c365b3bfcce8adb8bc0dccb2bd350deba51993e1",
+        "productId": "prd_SPM",
+        "ruleFormat": "v2017-06-19"
+    },
+    "suggestedRuleFormat": "v2017-06-19"
+}
