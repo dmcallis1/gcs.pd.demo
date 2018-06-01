@@ -2,11 +2,11 @@
     "definitions": {
         "originHostname": {
             "type": "hostname",
-            "default": null
+            "default": "origin.akshayranganath.com" 
         },
         "cpCode": {
             "type": "cpCode",
-            "default": null
+            "default": 612238 
         },
         "sureRouteTestObject": {
             "type": "url",
