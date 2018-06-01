@@ -7,10 +7,47 @@
         "updatedByUser": "7nz2pfn4ehyzh3qf",
         "updatedDate": "2018-05-31T19:54:41Z",
         "productionStatus": "INACTIVE",
-        "stagingStatus": "INACTIVE",
-        "etag": "5eb78e42d85948d3a2db53db728868a995fd763d",
+        "stagingStatus": "PENDING",
+        "etag": "499b427eb1dafe349c5dd1fca8f282602d0086bb",
         "productId": "prd_SPM",
         "ruleFormat": "v2017-06-19"
     },
-    "suggestedRuleFormat": "v2017-06-19"
+    "suggestedRuleFormat": "v2017-06-19",
+    "environmentHash": "882fe264603d42a03f83f0fd821df665be319681a22f7cf9b41465016ab94602",
+    "ruleTreeHash": "0ce5f341296caef42546ef4ab87451d0ec33e0d84f95178a4bb956835521036e",
+    "lastSavedHash": "b3a732f55a3df11fc69128b35792045d951df2cc4663f7ce1f02bf9ca268719c",
+    "lastValidatedHash": "b3a732f55a3df11fc69128b35792045d951df2cc4663f7ce1f02bf9ca268719c",
+    "lastSaveWarnings": [
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/validation_message.ssl_delegate_warning_intro",
+            "errorLocation": "#/rules/behaviors/0",
+            "detail": "Akamai enhanced the `Origin Server` behavior. Before configuring any settings, click the <strong>Verification Settings</strong> drop-down menu and read the context-sensitive information that appears."
+        },
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/validation_message.ssl_delegate_warning_rotate",
+            "errorLocation": "#/rules/behaviors/0",
+            "detail": "When rotating your origin's certificate, change your setting in the `Origin Server` behavior from <strong>Use Platform Settings</strong> to <strong>Choose Your Own</strong> and ensure both your old and new certificates are trusted. Your new certificate must be trusted <strong>before</strong> you start using it. You must continue to trust your old certificate until you have started using the new certificate. Failure to follow <a href=\"/dl/rd/propmgr/PropMgr_CSH.htm#1090\" target=\"_blank\">this procedure</a> may result in a service outage or a security breach. It is recommended that you contact your account team with any questions or concerns <strong>before</strong> activating your property."
+        },
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/need_feature",
+            "errorLocation": "#/rules/behaviors/7",
+            "detail": "`Cache Prefreshing` only applies to cacheable content, but caching was never turned on."
+        },
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/need_feature",
+            "errorLocation": "#/rules/children/3/criteria/0",
+            "detail": "When you're modifying the content returned to the user based on `Device Characteristics`, you should use the Modify Outgoing Response Header behavior to add a Vary: User-Agent header to the response."
+        },
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/validation_message.onlyonedge",
+            "errorLocation": "#/rules/children/6/criteria/0",
+            "detail": "The behaviors and matches enclosed within a `User Location Data` match will only be executed by the Akamai edge server that receives the client request. If the request is forwarded to another Akamai server, the matches and behaviors enclosed will be ignored. If you are unsure about how this will affect your property please contact your Akamai Technical representative."
+        }
+    ],
+    "lastSaveErrors": [],
+    "lastSaveHostnameErrors": [],
+    "lastSavedHostnamesHash": "e284af0c4a255c64eda96d01a4cd8daed5dcb748877c85d014f0d16cda563c97",
+    "pendingActivations": {
+        "STAGING": 5919679
+    }
 }

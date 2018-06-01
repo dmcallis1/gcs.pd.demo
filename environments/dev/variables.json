@@ -1,5 +1,5 @@
 {
-    "originHostname": "origin-dev.gcs.pd.demo",
+    "originHostname": null,
     "cpCode": null,
     "sureRouteTestObject": null
 }

@@ -3,6 +3,6 @@
         "cnameFrom": "dev.gcs.pd.demo",
         "cnameTo": "dev.gcs.pd.demo.edgesuite.net",
         "cnameType": "EDGE_HOSTNAME",
-        "edgeHostnameId": null
+        "edgeHostnameId": 3019141
     }
 ]

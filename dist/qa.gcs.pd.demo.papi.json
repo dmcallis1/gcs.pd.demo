@@ -1,0 +1,630 @@
+{
+    "rules": {
+        "name": "default",
+        "children": [
+            {
+                "name": "Performance",
+                "children": [
+                    {
+                        "name": "JPEG Images",
+                        "children": [],
+                        "behaviors": [
+                            {
+                                "name": "adaptiveImageCompression",
+                                "options": {
+                                    "compressMobile": true,
+                                    "compressStandard": true,
+                                    "tier1StandardCompressionMethod": "BYPASS",
+                                    "tier2MobileCompressionValue": 60,
+                                    "tier2StandardCompressionMethod": "BYPASS",
+                                    "tier3MobileCompressionMethod": "COMPRESS",
+                                    "tier3MobileCompressionValue": 40,
+                                    "tier3StandardCompressionMethod": "COMPRESS",
+                                    "tier3StandardCompressionValue": 40,
+                                    "title_aic_mobile": "",
+                                    "title_aic_nonmobile": "",
+                                    "tier1MobileCompressionMethod": "BYPASS",
+                                    "tier2MobileCompressionMethod": "COMPRESS"
+                                }
+                            }
+                        ],
+                        "criteria": [
+                            {
+                                "name": "fileExtension",
+                                "options": {
+                                    "matchCaseSensitive": false,
+                                    "matchOperator": "IS_ONE_OF",
+                                    "values": [
+                                        "jpg",
+                                        "jpeg",
+                                        "jpe",
+                                        "jif",
+                                        "jfif",
+                                        "jfi"
+                                    ]
+                                }
+                            }
+                        ],
+                        "criteriaMustSatisfy": "all",
+                        "comments": "Improves load time by applying Adaptive Image Compression (AIC) to all JPEG images. The poorer the connection quality, the more AIC compresses the image files."
+                    },
+                    {
+                        "name": "Compressible Objects",
+                        "children": [],
+                        "behaviors": [
+                            {
+                                "name": "gzipResponse",
+                                "options": {
+                                    "behavior": "ALWAYS"
+                                }
+                            }
+                        ],
+                        "criteria": [
+                            {
+                                "name": "contentType",
+                                "options": {
+                                    "matchCaseSensitive": false,
+                                    "matchOperator": "IS_ONE_OF",
+                                    "matchWildcard": true,
+                                    "values": [
+                                        "text/*",
+                                        "application/javascript",
+                                        "application/x-javascript",
+                                        "application/x-javascript*",
+                                        "application/json",
+                                        "application/x-json",
+                                        "application/*+json",
+                                        "application/*+xml",
+                                        "application/text",
+                                        "application/vnd.microsoft.icon",
+                                        "application/vnd-ms-fontobject",
+                                        "application/x-font-ttf",
+                                        "application/x-font-opentype",
+                                        "application/x-font-truetype",
+                                        "application/xmlfont/eot",
+                                        "application/xml",
+                                        "font/opentype",
+                                        "font/otf",
+                                        "font/eot",
+                                        "image/svg+xml",
+                                        "image/vnd.microsoft.icon"
+                                    ]
+                                }
+                            }
+                        ],
+                        "criteriaMustSatisfy": "all",
+                        "comments": "Compresses content to improve performance of clients with slow connections. Applies Last Mile Acceleration to requests when the returned object supports gzip compression."
+                    }
+                ],
+                "behaviors": [
+                    {
+                        "name": "enhancedAkamaiProtocol",
+                        "options": {
+                            "display": ""
+                        }
+                    },
+                    {
+                        "name": "allowTransferEncoding",
+                        "options": {
+                            "enabled": true
+                        }
+                    },
+                    {
+                        "name": "removeVary",
+                        "options": {
+                            "enabled": true
+                        }
+                    },
+                    {
+                        "name": "sureRoute",
+                        "options": {
+                            "enabled": true,
+                            "forceSslForward": false,
+                            "raceStatTtl": "30m",
+                            "testObjectUrl": "/akamai/sure-route-test-object.html",
+                            "toHostStatus": "INCOMING_HH",
+                            "type": "PERFORMANCE",
+                            "enableCustomKey": false
+                        }
+                    },
+                    {
+                        "name": "prefetch",
+                        "options": {
+                            "enabled": true
+                        }
+                    }
+                ],
+                "criteria": [],
+                "criteriaMustSatisfy": "all",
+                "comments": "Improves the performance of delivering objects to end users. Behaviors in this rule are applied to all requests as appropriate."
+            },
+            {
+                "name": "Offload",
+                "children": [
+                    {
+                        "name": "CSS and JavaScript",
+                        "children": [],
+                        "behaviors": [
+                            {
+                                "name": "caching",
+                                "options": {
+                                    "behavior": "MAX_AGE",
+                                    "mustRevalidate": false,
+                                    "ttl": "7d"
+                                }
+                            },
+                            {
+                                "name": "prefreshCache",
+                                "options": {
+                                    "enabled": true,
+                                    "prefreshval": 90
+                                }
+                            },
+                            {
+                                "name": "prefetchable",
+                                "options": {
+                                    "enabled": true
+                                }
+                            }
+                        ],
+                        "criteria": [
+                            {
+                                "name": "fileExtension",
+                                "options": {
+                                    "matchOperator": "IS_ONE_OF",
+                                    "values": [
+                                        "css",
+                                        "js"
+                                    ],
+                                    "matchCaseSensitive": false
+                                }
+                            }
+                        ],
+                        "criteriaMustSatisfy": "any",
+                        "comments": "Overrides the default caching behavior for CSS and JavaScript objects that are cached on the edge server. Because these object types are dynamic, the TTL is brief."
+                    },
+                    {
+                        "name": "Static Objects",
+                        "children": [],
+                        "behaviors": [
+                            {
+                                "name": "caching",
+                                "options": {
+                                    "behavior": "MAX_AGE",
+                                    "mustRevalidate": false,
+                                    "ttl": "7d"
+                                }
+                            },
+                            {
+                                "name": "prefreshCache",
+                                "options": {
+                                    "enabled": true,
+                                    "prefreshval": 90
+                                }
+                            },
+                            {
+                                "name": "prefetchable",
+                                "options": {
+                                    "enabled": true
+                                }
+                            }
+                        ],
+                        "criteria": [
+                            {
+                                "name": "fileExtension",
+                                "options": {
+                                    "matchCaseSensitive": false,
+                                    "matchOperator": "IS_ONE_OF",
+                                    "values": [
+                                        "aif",
+                                        "aiff",
+                                        "au",
+                                        "avi",
+                                        "bin",
+                                        "bmp",
+                                        "cab",
+                                        "carb",
+                                        "cct",
+                                        "cdf",
+                                        "class",
+                                        "doc",
+                                        "dcr",
+                                        "dtd",
+                                        "exe",
+                                        "flv",
+                                        "gcf",
+                                        "gff",
+                                        "gif",
+                                        "grv",
+                                        "hdml",
+                                        "hqx",
+                                        "ico",
+                                        "ini",
+                                        "jpeg",
+                                        "jpg",
+                                        "mov",
+                                        "mp3",
+                                        "nc",
+                                        "pct",
+                                        "pdf",
+                                        "png",
+                                        "ppc",
+                                        "pws",
+                                        "swa",
+                                        "swf",
+                                        "txt",
+                                        "vbs",
+                                        "w32",
+                                        "wav",
+                                        "wbmp",
+                                        "wml",
+                                        "wmlc",
+                                        "wmls",
+                                        "wmlsc",
+                                        "xsd",
+                                        "zip",
+                                        "pict",
+                                        "tif",
+                                        "tiff",
+                                        "mid",
+                                        "midi",
+                                        "ttf",
+                                        "eot",
+                                        "woff",
+                                        "woff2",
+                                        "otf",
+                                        "svg",
+                                        "svgz",
+                                        "webp",
+                                        "jxr",
+                                        "jar",
+                                        "jp2",
+                                        "abc"
+                                    ]
+                                }
+                            }
+                        ],
+                        "criteriaMustSatisfy": "any",
+                        "comments": "Overrides the default caching behavior for images, music, and similar objects that are cached on the edge server. Because these object types are static, the TTL is long."
+                    },
+                    {
+                        "name": "Uncacheable Responses",
+                        "children": [],
+                        "behaviors": [
+                            {
+                                "name": "downstreamCache",
+                                "options": {
+                                    "behavior": "TUNNEL_ORIGIN"
+                                }
+                            }
+                        ],
+                        "criteria": [
+                            {
+                                "name": "cacheability",
+                                "options": {
+                                    "matchOperator": "IS_NOT",
+                                    "value": "CACHEABLE"
+                                }
+                            }
+                        ],
+                        "criteriaMustSatisfy": "all",
+                        "comments": "Overrides the default downstream caching behavior for uncacheable object types. Instructs the edge server to pass Cache-Control and/or Expire headers from the origin to the client."
+                    }
+                ],
+                "behaviors": [
+                    {
+                        "name": "caching",
+                        "options": {
+                            "behavior": "NO_STORE"
+                        }
+                    },
+                    {
+                        "name": "cacheError",
+                        "options": {
+                            "enabled": true,
+                            "preserveStale": true,
+                            "ttl": "10s"
+                        }
+                    },
+                    {
+                        "name": "downstreamCache",
+                        "options": {
+                            "allowBehavior": "LESSER",
+                            "behavior": "ALLOW",
+                            "sendHeaders": "CACHE_CONTROL_AND_EXPIRES",
+                            "sendPrivate": false
+                        }
+                    },
+                    {
+                        "name": "tieredDistribution",
+                        "options": {
+                            "enabled": true
+                        }
+                    }
+                ],
+                "criteria": [],
+                "criteriaMustSatisfy": "all",
+                "comments": "Controls caching, which offloads traffic away from the origin. Most objects types are not cached. However, the child rules override this behavior for certain subsets of requests."
+            },
+            {
+                "name": "Homepage Caching",
+                "children": [],
+                "behaviors": [
+                    {
+                        "name": "caching",
+                        "options": {
+                            "behavior": "MAX_AGE",
+                            "mustRevalidate": false,
+                            "ttl": "0s"
+                        }
+                    },
+                    {
+                        "name": "prefreshCache",
+                        "options": {
+                            "enabled": true,
+                            "prefreshval": 90
+                        }
+                    }
+                ],
+                "criteria": [
+                    {
+                        "name": "path",
+                        "options": {
+                            "matchOperator": "MATCHES_ONE_OF",
+                            "values": [
+                                "/"
+                            ],
+                            "matchCaseSensitive": false
+                        }
+                    }
+                ],
+                "criteriaMustSatisfy": "all"
+            },
+            {
+                "name": "Mobile Redirect",
+                "children": [],
+                "behaviors": [
+                    {
+                        "name": "modifyOutgoingRequestHeader",
+                        "options": {
+                            "action": "ADD",
+                            "standardAddHeaderName": "OTHER",
+                            "headerValue": "true",
+                            "customHeaderName": "mobile"
+                        }
+                    }
+                ],
+                "criteria": [
+                    {
+                        "name": "deviceCharacteristic",
+                        "options": {
+                            "characteristic": "IS_WIRELESS_DEVICE",
+                            "booleanValue": true
+                        }
+                    }
+                ],
+                "criteriaMustSatisfy": "all"
+            },
+            {
+                "name": "Real User Monitoring",
+                "children": [],
+                "behaviors": [
+                    {
+                        "name": "realUserMonitoring",
+                        "options": {
+                            "enabled": false
+                        }
+                    }
+                ],
+                "criteria": [],
+                "criteriaMustSatisfy": "all"
+            },
+            {
+                "name": "Deny Specific Referrer",
+                "children": [],
+                "behaviors": [
+                    {
+                        "name": "denyAccess",
+                        "options": {
+                            "reason": "undesired-referer",
+                            "enabled": true
+                        }
+                    }
+                ],
+                "criteria": [
+                    {
+                        "name": "requestHeader",
+                        "options": {
+                            "headerName": "Referer",
+                            "matchWildcardName": false,
+                            "matchOperator": "IS_ONE_OF",
+                            "values": [
+                                "http://ww.fastly.com"
+                            ],
+                            "matchCaseSensitiveValue": false,
+                            "matchWildcardValue": true
+                        }
+                    }
+                ],
+                "criteriaMustSatisfy": "all"
+            },
+            {
+                "name": "Deny by Location",
+                "children": [],
+                "behaviors": [
+                    {
+                        "name": "denyAccess",
+                        "options": {
+                            "reason": "deny-by-continent",
+                            "enabled": true
+                        }
+                    }
+                ],
+                "criteria": [
+                    {
+                        "name": "userLocation",
+                        "options": {
+                            "field": "CONTINENT",
+                            "checkIps": "CONNECTING",
+                            "continentValues": [
+                                "NA"
+                            ],
+                            "matchOperator": "IS_ONE_OF"
+                        }
+                    }
+                ],
+                "criteriaMustSatisfy": "all",
+                "comments": "List the locations that need to be denied"
+            },
+            {
+                "name": "Adaptive Image Compression",
+                "children": [],
+                "behaviors": [
+                    {
+                        "name": "adaptiveImageCompression",
+                        "options": {
+                            "title_aic_mobile": "",
+                            "title_aic_nonmobile": "",
+                            "compressMobile": true,
+                            "compressStandard": true,
+                            "tier1MobileCompressionMethod": "BYPASS",
+                            "tier2MobileCompressionMethod": "COMPRESS",
+                            "tier2MobileCompressionValue": 60,
+                            "tier3MobileCompressionMethod": "COMPRESS",
+                            "tier3MobileCompressionValue": 40,
+                            "tier1StandardCompressionMethod": "BYPASS",
+                            "tier2StandardCompressionMethod": "BYPASS",
+                            "tier3StandardCompressionMethod": "COMPRESS",
+                            "tier3StandardCompressionValue": 40
+                        }
+                    }
+                ],
+                "criteria": [
+                    {
+                        "name": "fileExtension",
+                        "options": {
+                            "matchCaseSensitive": false,
+                            "matchOperator": "IS_ONE_OF",
+                            "values": [
+                                "jpg",
+                                "jpeg",
+                                "jpe",
+                                "jif",
+                                "jfif",
+                                "jfi"
+                            ]
+                        }
+                    }
+                ],
+                "criteriaMustSatisfy": "all",
+                "comments": "A default AIC behavior with a match on JPEG-compatible file extensions."
+            }
+        ],
+        "behaviors": [
+            {
+                "name": "origin",
+                "options": {
+                    "cacheKeyHostname": "ORIGIN_HOSTNAME",
+                    "compress": true,
+                    "enableTrueClientIp": false,
+                    "forwardHostHeader": "ORIGIN_HOSTNAME",
+                    "httpPort": 80,
+                    "originType": "CUSTOMER",
+                    "hostname": "origin-qa.gcs.pd.demo",
+                    "originCertificate": "",
+                    "verificationMode": "PLATFORM_SETTINGS",
+                    "ports": "",
+                    "httpsPort": 443,
+                    "originSni": false
+                }
+            },
+            {
+                "name": "allowPost",
+                "options": {
+                    "allowWithoutContentLength": false,
+                    "enabled": true
+                }
+            },
+            {
+                "name": "realUserMonitoring",
+                "options": {
+                    "enabled": true
+                }
+            },
+            {
+                "name": "prefetch",
+                "options": {
+                    "enabled": true
+                }
+            },
+            {
+                "name": "removeVary",
+                "options": {
+                    "enabled": true
+                }
+            },
+            {
+                "name": "cpCode",
+                "options": {
+                    "value": {
+                        "id": 612238
+                    }
+                }
+            },
+            {
+                "name": "modifyOutgoingResponseHeader",
+                "options": {
+                    "action": "ADD",
+                    "standardAddHeaderName": "OTHER",
+                    "headerValue": "Bar",
+                    "customHeaderName": "Foo"
+                }
+            },
+            {
+                "name": "prefreshCache",
+                "options": {
+                    "enabled": true,
+                    "prefreshval": 90
+                }
+            },
+            {
+                "name": "modifyOutgoingRequestHeader",
+                "options": {
+                    "action": "MODIFY",
+                    "standardModifyHeaderName": "OTHER",
+                    "newHeaderValue": "{{builtin.AK_TLS_VERSION}}|{{builtin.AK_TLS_CIPHER_NAME}}",
+                    "avoidDuplicateHeaders": false,
+                    "customHeaderName": "X-Edge-TLS-Info"
+                }
+            },
+            {
+                "name": "modifyOutgoingResponseHeader",
+                "options": {
+                    "action": "ADD",
+                    "standardAddHeaderName": "PRAGMA",
+                    "headerValue": "dom was here"
+                }
+            }
+        ],
+        "options": {
+            "is_secure": true
+        },
+        "variables": [
+            {
+                "name": "PMUSER_FOOCPCODE",
+                "value": "12345",
+                "description": "CP Code",
+                "hidden": false,
+                "sensitive": false
+            },
+            {
+                "name": "PMUSER_ORIGIN",
+                "value": "origin.akshayranganath.com",
+                "description": "Origin",
+                "hidden": false,
+                "sensitive": false
+            }
+        ],
+        "comments": "The behaviors in the Default Rule apply to all requests for the property hostname(s) unless another rule overrides the Default Rule settings."
+    }
+}
