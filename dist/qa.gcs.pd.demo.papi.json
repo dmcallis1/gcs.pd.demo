@@ -6,49 +6,6 @@
                 "name": "Performance",
                 "children": [
                     {
-                        "name": "JPEG Images",
-                        "children": [],
-                        "behaviors": [
-                            {
-                                "name": "adaptiveImageCompression",
-                                "options": {
-                                    "compressMobile": true,
-                                    "compressStandard": true,
-                                    "tier1StandardCompressionMethod": "BYPASS",
-                                    "tier2MobileCompressionValue": 60,
-                                    "tier2StandardCompressionMethod": "BYPASS",
-                                    "tier3MobileCompressionMethod": "COMPRESS",
-                                    "tier3MobileCompressionValue": 40,
-                                    "tier3StandardCompressionMethod": "COMPRESS",
-                                    "tier3StandardCompressionValue": 40,
-                                    "title_aic_mobile": "",
-                                    "title_aic_nonmobile": "",
-                                    "tier1MobileCompressionMethod": "BYPASS",
-                                    "tier2MobileCompressionMethod": "COMPRESS"
-                                }
-                            }
-                        ],
-                        "criteria": [
-                            {
-                                "name": "fileExtension",
-                                "options": {
-                                    "matchCaseSensitive": false,
-                                    "matchOperator": "IS_ONE_OF",
-                                    "values": [
-                                        "jpg",
-                                        "jpeg",
-                                        "jpe",
-                                        "jif",
-                                        "jfif",
-                                        "jfi"
-                                    ]
-                                }
-                            }
-                        ],
-                        "criteriaMustSatisfy": "all",
-                        "comments": "Improves load time by applying Adaptive Image Compression (AIC) to all JPEG images. The poorer the connection quality, the more AIC compresses the image files."
-                    },
-                    {
                         "name": "Compressible Objects",
                         "children": [],
                         "behaviors": [
@@ -485,7 +442,7 @@
                         "options": {
                             "title_aic_mobile": "",
                             "title_aic_nonmobile": "",
-                            "compressMobile": true,
+                            "compressMobile": false,
                             "compressStandard": true,
                             "tier1MobileCompressionMethod": "BYPASS",
                             "tier2MobileCompressionMethod": "COMPRESS",
@@ -530,7 +487,7 @@
                     "forwardHostHeader": "ORIGIN_HOSTNAME",
                     "httpPort": 80,
                     "originType": "CUSTOMER",
-                    "hostname": "origin-qa.gcs.pd.demo",
+                    "hostname": "origin.akshayranganath.com",
                     "originCertificate": "",
                     "verificationMode": "PLATFORM_SETTINGS",
                     "ports": "",
@@ -609,22 +566,6 @@
         "options": {
             "is_secure": true
         },
-        "variables": [
-            {
-                "name": "PMUSER_FOOCPCODE",
-                "value": "12345",
-                "description": "CP Code",
-                "hidden": false,
-                "sensitive": false
-            },
-            {
-                "name": "PMUSER_ORIGIN",
-                "value": "origin.akshayranganath.com",
-                "description": "Origin",
-                "hidden": false,
-                "sensitive": false
-            }
-        ],
         "comments": "The behaviors in the Default Rule apply to all requests for the property hostname(s) unless another rule overrides the Default Rule settings."
     }
 }

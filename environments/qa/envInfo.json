@@ -7,15 +7,15 @@
         "updatedByUser": "7nz2pfn4ehyzh3qf",
         "updatedDate": "2018-05-31T19:54:48Z",
         "productionStatus": "INACTIVE",
-        "stagingStatus": "INACTIVE",
-        "etag": "c365b3bfcce8adb8bc0dccb2bd350deba51993e1",
+        "stagingStatus": "PENDING",
+        "etag": "582f4dd2024f330fb5c0f881e5ccdb240c02d7bf",
         "productId": "prd_SPM",
         "ruleFormat": "v2017-06-19"
     },
     "suggestedRuleFormat": "v2017-06-19",
-    "environmentHash": "0dadef9afbe091e2872b14aae14185a19638b3dff110307810b8af476b96e572",
-    "ruleTreeHash": "29ee567cf8de5389fec5685153ec8c817f459e511ae06912ddd737b070eb2288",
-    "lastValidatedHash": "0dadef9afbe091e2872b14aae14185a19638b3dff110307810b8af476b96e572",
+    "environmentHash": "7e622a7f0bcd8b5fe476c998a5f8137dc87a7df62033b57bee0ce25ecb42d829",
+    "ruleTreeHash": "1e6597490e127dbfeaf00da2e20d1994aafee85311f4d617497e8e78df70d18d",
+    "lastValidatedHash": "7e622a7f0bcd8b5fe476c998a5f8137dc87a7df62033b57bee0ce25ecb42d829",
     "lastSaveWarnings": [
         {
             "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/validation_message.ssl_delegate_warning_intro",
@@ -43,5 +43,11 @@
             "detail": "The behaviors and matches enclosed within a `User Location Data` match will only be executed by the Akamai edge server that receives the client request. If the request is forwarded to another Akamai server, the matches and behaviors enclosed will be ignored. If you are unsure about how this will affect your property please contact your Akamai Technical representative."
         }
     ],
-    "lastSaveErrors": []
+    "lastSaveErrors": [],
+    "lastSavedHash": "7e622a7f0bcd8b5fe476c998a5f8137dc87a7df62033b57bee0ce25ecb42d829",
+    "lastSaveHostnameErrors": [],
+    "lastSavedHostnamesHash": "6e893951c57daf6a9376a909531c3b97943141bc61801e1a406d59d9e7e1fd6e",
+    "pendingActivations": {
+        "STAGING": 5919760
+    }
 }

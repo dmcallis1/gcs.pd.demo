@@ -1,5 +1,6 @@
 {
-    "originHostname": "origin-qa.gcs.pd.demo",
+    "originHostname": null,
     "cpCode": null,
-    "sureRouteTestObject": null
+    "sureRouteTestObject": null,
+    "aicCompressMobile": false
 }

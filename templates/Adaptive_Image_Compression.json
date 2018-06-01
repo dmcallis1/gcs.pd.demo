@@ -7,7 +7,7 @@
             "options": {
                 "title_aic_mobile": "",
                 "title_aic_nonmobile": "",
-                "compressMobile": true,
+                "compressMobile": "${env.aicCompressMobile}",
                 "compressStandard": true,
                 "tier1MobileCompressionMethod": "BYPASS",
                 "tier2MobileCompressionMethod": "COMPRESS",

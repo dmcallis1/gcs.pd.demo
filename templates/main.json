@@ -100,22 +100,6 @@
         "options": {
             "is_secure": true
         },
-        "variables": [
-            {
-                "name": "PMUSER_FOOCPCODE",
-                "value": "12345",
-                "description": "CP Code",
-                "hidden": false,
-                "sensitive": false
-            },
-            {
-                "name": "PMUSER_ORIGIN",
-                "value": "origin.akshayranganath.com",
-                "description": "Origin",
-                "hidden": false,
-                "sensitive": false
-            }
-        ],
         "comments": "The behaviors in the Default Rule apply to all requests for the property hostname(s) unless another rule overrides the Default Rule settings."
     }
 }

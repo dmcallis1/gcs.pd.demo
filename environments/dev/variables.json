@@ -1,5 +1,6 @@
 {
     "originHostname": null,
     "cpCode": null,
-    "sureRouteTestObject": null
+    "sureRouteTestObject": null,
+    "aicCompressMobile": true
 }

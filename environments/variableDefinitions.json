@@ -11,6 +11,10 @@
         "sureRouteTestObject": {
             "type": "url",
             "default": "/akamai/sure-route-test-object.html"
+        },
+        "aicCompressMobile": {
+            "type": "boolean",
+            "default": null
         }
     }
 }
