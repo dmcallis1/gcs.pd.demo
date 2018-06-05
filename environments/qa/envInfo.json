@@ -3,19 +3,19 @@
     "propertyName": "qa.gcs.pd.demo",
     "propertyId": 465135,
     "latestVersionInfo": {
-        "propertyVersion": 4,
+        "propertyVersion": 5,
         "updatedByUser": "qvwonvxqatf6ad5i",
-        "updatedDate": "2018-06-05T02:40:54Z",
-        "productionStatus": "ACTIVE",
-        "stagingStatus": "ACTIVE",
-        "etag": "376a5919cd5ba188349e2aa56cdd77f4ad72c169",
+        "updatedDate": "2018-06-05T15:21:25Z",
+        "productionStatus": "INACTIVE",
+        "stagingStatus": "PENDING",
+        "etag": "41d871a3a859ca83cb3a233642dbbc18163cf25f",
         "productId": "prd_SPM",
         "ruleFormat": "v2017-06-19"
     },
     "suggestedRuleFormat": "v2017-06-19",
-    "environmentHash": "886c566ed871cbc694a7aa579788824d5593706f6699a5e2ba764a309c2ca7d9",
+    "environmentHash": "fdde5aeb9f37ad2cf7a7fc5cd19ae020b065491d1fc7cd3f089b758637040f2d",
     "ruleTreeHash": "24953764ec5dfd89f54b3161fbbffeb65c62d68b883a20e99648d2f21790116a",
-    "lastValidatedHash": "886c566ed871cbc694a7aa579788824d5593706f6699a5e2ba764a309c2ca7d9",
+    "lastValidatedHash": "fdde5aeb9f37ad2cf7a7fc5cd19ae020b065491d1fc7cd3f089b758637040f2d",
     "lastSaveWarnings": [
         {
             "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/validation_message.ssl_delegate_warning_intro",
@@ -44,7 +44,7 @@
         }
     ],
     "lastSaveErrors": [],
-    "lastSavedHash": "886c566ed871cbc694a7aa579788824d5593706f6699a5e2ba764a309c2ca7d9",
+    "lastSavedHash": "fdde5aeb9f37ad2cf7a7fc5cd19ae020b065491d1fc7cd3f089b758637040f2d",
     "lastSaveHostnameErrors": [],
     "lastSavedHostnamesHash": "f7a802ae013b1a4acbf7a3f835564db09775dffaa3d0ca3ea246761429062448",
     "activeIn_STAGING_Info": {
@@ -66,5 +66,8 @@
         "etag": "376a5919cd5ba188349e2aa56cdd77f4ad72c169",
         "productId": "prd_SPM",
         "ruleFormat": "v2017-06-19"
+    },
+    "pendingActivations": {
+        "STAGING": 5935181
     }
 }

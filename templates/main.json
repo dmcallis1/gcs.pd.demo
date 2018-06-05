@@ -39,7 +39,7 @@
             {
                 "name": "prefetch",
                 "options": {
-                    "enabled": true
+                    "enabled": "${env.mainPrefetch}"
                 }
             },
             {

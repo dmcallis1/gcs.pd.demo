@@ -12,6 +12,10 @@
             "type": "url",
             "default": "/akamai/sure-route-test-object.html"
         },
+        "mainPrefetch": {
+            "type": "boolean",
+            "default": true
+        },
         "aicCompressMobile": {
             "type": "boolean",
             "default": null

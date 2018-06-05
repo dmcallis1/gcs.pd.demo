@@ -2,6 +2,7 @@
     "originHostname": null,
     "cpCode": null,
     "sureRouteTestObject": null,
+    "mainPrefetch": null,
     "aicCompressMobile": true,
     "rumEnabled": false,
     "csJsTtl": null
