@@ -5,7 +5,7 @@
         {
             "name": "realUserMonitoring",
             "options": {
-                "enabled": false
+                "enabled": "${env.rumEnabled}"
             }
         }
     ],

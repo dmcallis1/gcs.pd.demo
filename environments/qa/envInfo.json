@@ -3,19 +3,19 @@
     "propertyName": "qa.gcs.pd.demo",
     "propertyId": 465135,
     "latestVersionInfo": {
-        "propertyVersion": 1,
+        "propertyVersion": 4,
         "updatedByUser": "qvwonvxqatf6ad5i",
-        "updatedDate": "2018-06-01T02:34:17Z",
-        "productionStatus": "INACTIVE",
+        "updatedDate": "2018-06-05T02:40:54Z",
+        "productionStatus": "ACTIVE",
         "stagingStatus": "ACTIVE",
-        "etag": "52e19aa4503d2c6c45584aa153cea1c57fbdec26",
+        "etag": "376a5919cd5ba188349e2aa56cdd77f4ad72c169",
         "productId": "prd_SPM",
         "ruleFormat": "v2017-06-19"
     },
     "suggestedRuleFormat": "v2017-06-19",
-    "environmentHash": "7e622a7f0bcd8b5fe476c998a5f8137dc87a7df62033b57bee0ce25ecb42d829",
-    "ruleTreeHash": "1e6597490e127dbfeaf00da2e20d1994aafee85311f4d617497e8e78df70d18d",
-    "lastValidatedHash": "7e622a7f0bcd8b5fe476c998a5f8137dc87a7df62033b57bee0ce25ecb42d829",
+    "environmentHash": "886c566ed871cbc694a7aa579788824d5593706f6699a5e2ba764a309c2ca7d9",
+    "ruleTreeHash": "24953764ec5dfd89f54b3161fbbffeb65c62d68b883a20e99648d2f21790116a",
+    "lastValidatedHash": "886c566ed871cbc694a7aa579788824d5593706f6699a5e2ba764a309c2ca7d9",
     "lastSaveWarnings": [
         {
             "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/validation_message.ssl_delegate_warning_intro",
@@ -29,7 +29,7 @@
         },
         {
             "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/need_feature",
-            "errorLocation": "#/rules/behaviors/7",
+            "errorLocation": "#/rules/behaviors/6",
             "detail": "`Cache Prefreshing` only applies to cacheable content, but caching was never turned on."
         },
         {
@@ -44,16 +44,26 @@
         }
     ],
     "lastSaveErrors": [],
-    "lastSavedHash": "7e622a7f0bcd8b5fe476c998a5f8137dc87a7df62033b57bee0ce25ecb42d829",
+    "lastSavedHash": "886c566ed871cbc694a7aa579788824d5593706f6699a5e2ba764a309c2ca7d9",
     "lastSaveHostnameErrors": [],
-    "lastSavedHostnamesHash": "6e893951c57daf6a9376a909531c3b97943141bc61801e1a406d59d9e7e1fd6e",
+    "lastSavedHostnamesHash": "f7a802ae013b1a4acbf7a3f835564db09775dffaa3d0ca3ea246761429062448",
     "activeIn_STAGING_Info": {
-        "propertyVersion": 1,
+        "propertyVersion": 4,
         "updatedByUser": "qvwonvxqatf6ad5i",
-        "updatedDate": "2018-06-01T02:34:17Z",
-        "productionStatus": "INACTIVE",
+        "updatedDate": "2018-06-05T02:40:54Z",
+        "productionStatus": "ACTIVE",
         "stagingStatus": "ACTIVE",
-        "etag": "52e19aa4503d2c6c45584aa153cea1c57fbdec26",
+        "etag": "376a5919cd5ba188349e2aa56cdd77f4ad72c169",
+        "productId": "prd_SPM",
+        "ruleFormat": "v2017-06-19"
+    },
+    "activeIn_PRODUCTION_Info": {
+        "propertyVersion": 4,
+        "updatedByUser": "qvwonvxqatf6ad5i",
+        "updatedDate": "2018-06-05T02:40:54Z",
+        "productionStatus": "ACTIVE",
+        "stagingStatus": "ACTIVE",
+        "etag": "376a5919cd5ba188349e2aa56cdd77f4ad72c169",
         "productId": "prd_SPM",
         "ruleFormat": "v2017-06-19"
     }

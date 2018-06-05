@@ -1,5 +1,11 @@
 [
     {
+        "cnameFrom": "www.qa.pddemo.gcs.com",
+        "cnameTo": "www.qa.pddemo.gcs.com.edgesuite.net",
+        "cnameType": "EDGE_HOSTNAME",
+        "edgeHostnameId": 3023331
+    },
+    {
         "cnameFrom": "qa.gcs.pd.demo",
         "cnameTo": "qa.gcs.pd.demo.edgesuite.net",
         "cnameType": "EDGE_HOSTNAME",

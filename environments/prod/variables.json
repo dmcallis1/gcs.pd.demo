@@ -2,5 +2,7 @@
     "originHostname": "origin-prod.gcs.pd.demo",
     "cpCode": null,
     "sureRouteTestObject": null,
-    "aicCompressMobile": false
+    "aicCompressMobile": false,
+    "rumEnabled": true,
+    "csJsTtl": null
 }

@@ -15,6 +15,14 @@
         "aicCompressMobile": {
             "type": "boolean",
             "default": null
+        },
+        "rumEnabled": {
+            "type": "boolean",
+            "default": null
+        },
+        "csJsTtl": {
+            "type": "string",
+            "default": "7d"
         }
     }
 }

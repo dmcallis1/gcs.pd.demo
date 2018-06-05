@@ -37,12 +37,6 @@
                 }
             },
             {
-                "name": "realUserMonitoring",
-                "options": {
-                    "enabled": true
-                }
-            },
-            {
                 "name": "prefetch",
                 "options": {
                     "enabled": true

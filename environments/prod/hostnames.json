@@ -1,8 +1,15 @@
 [
     {
+        "cnameFrom": "www.pddemo.gcs.com",
+        "cnameTo": "www.pddemo.gcs.com.edgesuite.net",
+        "cnameType": "EDGE_HOSTNAME",
+        "edgeHostnameId": 3023364
+    },
+    {
         "cnameFrom": "prod.gcs.pd.demo",
         "cnameTo": "prod.gcs.pd.demo.edgesuite.net",
         "cnameType": "EDGE_HOSTNAME",
-        "edgeHostnameId": null
+        "edgeHostnameId": 3020041,
+        "ipVersionBehavior": "IPV6_COMPLIANCE"
     }
 ]
