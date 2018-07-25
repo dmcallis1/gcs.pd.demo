@@ -9,7 +9,8 @@
             "#include:Real_User_Monitoring.json",
             "#include:Deny_Specific_Referrer.json",
             "#include:Deny_by_Location.json",
-            "#include:Adaptive_Image_Compression.json"
+            "#include:Adaptive_Image_Compression.json",
+	    "#include:H2.json"
         ],
         "behaviors": [
             {
