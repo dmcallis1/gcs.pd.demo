@@ -3,12 +3,12 @@
     "propertyName": "qa.gcs.pd.demo",
     "propertyId": 465135,
     "latestVersionInfo": {
-        "propertyVersion": 5,
+        "propertyVersion": 10,
         "updatedByUser": "qvwonvxqatf6ad5i",
-        "updatedDate": "2018-06-05T15:21:33Z",
+        "updatedDate": "2018-07-24T03:06:35Z",
         "productionStatus": "ACTIVE",
         "stagingStatus": "ACTIVE",
-        "etag": "41d871a3a859ca83cb3a233642dbbc18163cf25f",
+        "etag": "1ce40f2aa3a8a6617e1d27b7e8f70d1a9537365d",
         "productId": "prd_SPM",
         "ruleFormat": "v2017-06-19"
     },
@@ -48,22 +48,22 @@
     "lastSaveHostnameErrors": [],
     "lastSavedHostnamesHash": "f7a802ae013b1a4acbf7a3f835564db09775dffaa3d0ca3ea246761429062448",
     "activeIn_STAGING_Info": {
-        "propertyVersion": 5,
+        "propertyVersion": 10,
         "updatedByUser": "qvwonvxqatf6ad5i",
-        "updatedDate": "2018-06-05T15:21:33Z",
+        "updatedDate": "2018-07-24T03:06:35Z",
         "productionStatus": "ACTIVE",
         "stagingStatus": "ACTIVE",
-        "etag": "41d871a3a859ca83cb3a233642dbbc18163cf25f",
+        "etag": "1ce40f2aa3a8a6617e1d27b7e8f70d1a9537365d",
         "productId": "prd_SPM",
         "ruleFormat": "v2017-06-19"
     },
     "activeIn_PRODUCTION_Info": {
-        "propertyVersion": 5,
+        "propertyVersion": 10,
         "updatedByUser": "qvwonvxqatf6ad5i",
-        "updatedDate": "2018-06-05T15:21:33Z",
+        "updatedDate": "2018-07-24T03:06:35Z",
         "productionStatus": "ACTIVE",
         "stagingStatus": "ACTIVE",
-        "etag": "41d871a3a859ca83cb3a233642dbbc18163cf25f",
+        "etag": "1ce40f2aa3a8a6617e1d27b7e8f70d1a9537365d",
         "productId": "prd_SPM",
         "ruleFormat": "v2017-06-19"
     }
