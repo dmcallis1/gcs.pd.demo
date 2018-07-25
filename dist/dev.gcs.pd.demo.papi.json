@@ -475,20 +475,6 @@
                 ],
                 "criteriaMustSatisfy": "all",
                 "comments": "A default AIC behavior with a match on JPEG-compatible file extensions."
-            },
-            {
-                "name": "HTTP2",
-                "children": [],
-                "behaviors": [
-                    {
-                        "name": "http2",
-                        "options": {
-                            "enabled": ""
-                        }
-                    }
-                ],
-                "criteria": [],
-                "criteriaMustSatisfy": "all"
             }
         ],
         "behaviors": [
